@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | TechVault</title>
+
+    <link rel="stylesheet" href="product-details.css">
+    <script src="product-details.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        Welcome to TechVault | Your Trusted Electronics Store
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navigation">
+
+            <a href="index.html" class="logo">
+                TechVault<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="header-actions">
+                <a href="wishlist.html">♡ Wishlist</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+                <a href="login.html">Account</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Product Details -->
+    <main class="product-details">
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> /
+            <a href="shop.html">Shop</a> /
+            <span id="breadcrumbName">Product Details</span>
+        </div>
+
+        <section class="product-layout">
+
+            <!-- Product Image -->
+            <div class="product-image">
+                <span id="productEmoji">📱</span>
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+
+                <p class="product-category" id="productCategory">
+                    Electronics
+                </p>
+
+                <h1 id="productName">Product Name</h1>
+
+                <p class="product-rating" id="productRating">
+                    ★★★★☆
+                </p>
+
+                <p class="product-price" id="productPrice">
+                    KSh 0
+                </p>
+
+                <p class="product-description" id="productDescription">
+                    Product description will appear here.
+                </p>
+
+                <p class="stock-status" id="stockStatus">
+                    Checking availability...
+                </p>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-control">
+                    <button type="button" id="decreaseQty"
+                        aria-label="Decrease quantity">−</button>
+
+                    <input type="number" id="quantity"
+                        value="1" min="1" max="25"
+                        aria-label="Product quantity">
+
+                    <button type="button" id="increaseQty"
+                        aria-label="Increase quantity">+</button>
+                </div>
+
+                <!-- Product Buttons -->
+                <div class="product-buttons">
+
+                    <button type="button"
+                        class="btn btn-primary"
+                        id="detailsAddToCart">
+                        Add to Cart
+                    </button>
+
+                    <button type="button"
+                        class="btn btn-secondary"
+                        id="detailsWishlist">
+                        ♡ Add to Wishlist
+                    </button>
+
+                </div>
+
+                <p class="details-message" id="detailsMessage"
+                    aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+        <!-- Specifications -->
+        <section class="specifications">
+
+            <h2>Product Specifications</h2>
+
+            <table class="specification-table">
+                <tbody id="specificationTable">
+                    <tr>
+                        <th>Product</th>
+                        <td>Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 TechVault. All rights reserved.</p>
+        <p>Your technology. Your lifestyle.</p>
+    </footer>
+
+</body>
+</html>

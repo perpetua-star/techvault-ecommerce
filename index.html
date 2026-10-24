@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVault | Electronics Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="announcement">
+        FREE DELIVERY ON ORDERS OVER KSh 5,000
+    </div>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">Tech<span>Vault.</span></a>
+
+        <form class="search-bar" id="searchForm">
+            <input type="search" id="searchInput"
+                placeholder="Search phones, laptops, accessories..."
+                aria-label="Search products">
+            <button type="submit" aria-label="Search">⌕</button>
+        </form>
+
+        <div class="header-actions">
+            <a href="login.html">Account</a>
+            <a href="wishlist.html">♡ Wishlist</a>
+            <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="#categories">Categories</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#deals">Deals</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">LATEST TECH. BEST PRICES.</p>
+                <h1>Upgrade Your <span>Digital Life.</span></h1>
+                <p>
+                    Discover the latest electronics, smart devices
+                    and accessories at great prices.
+                </p>
+                <a href="shop.html" class="btn">Shop Now →</a>
+            </div>
+
+            <div class="hero-visual" aria-label="Featured technology">
+                <div class="device device-laptop">💻</div>
+                <div class="device device-phone">📱</div>
+                <div class="device device-audio">🎧</div>
+            </div>
+        </section>
+
+        <section class="categories section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE OUR STORE</p>
+                    <h2>Shop by Category</h2>
+                </div>
+                <a href="shop.html">View All →</a>
+            </div>
+
+            <div class="category-grid">
+                <a href="shop.html?category=smartphones" class="category-card">
+                    <span>📱</span><h3>Smartphones</h3>
+                </a>
+                <a href="shop.html?category=laptops" class="category-card">
+                    <span>💻</span><h3>Laptops</h3>
+                </a>
+                <a href="shop.html?category=audio" class="category-card">
+                    <span>🎧</span><h3>Headphones</h3>
+                </a>
+                <a href="shop.html?category=wearables" class="category-card">
+                    <span>⌚</span><h3>Smartwatches</h3>
+                </a>
+                <a href="shop.html?category=gaming" class="category-card">
+                    <span>🎮</span><h3>Gaming</h3>
+                </a>
+                <a href="shop.html?category=accessories" class="category-card">
+                    <span>🔌</span><h3>Accessories</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured section" id="featured">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Featured Products</h2>
+                </div>
+                <a href="shop.html">Shop All →</a>
+            </div>
+
+            <div class="product-grid" id="featuredProducts">
+                <article class="product-card" data-name="Samsung Galaxy Smartphone">
+                    <div class="product-image">📱</div>
+                    <button class="wishlist-btn" data-id="1"
+                        aria-label="Add smartphone to wishlist">♡</button>
+                    <p class="product-category">Smartphones</p>
+                    <h3>Samsung Galaxy Smartphone</h3>
+                    <p class="rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="price">KSh 45,000</p>
+                    <button class="btn add-to-cart"
+                        data-id="1" data-name="Samsung Galaxy Smartphone"
+                        data-price="45000">Add to Cart</button>
+                </article>
+
+                <article class="product-card" data-name="HP Pavilion Laptop">
+                    <div class="product-image">💻</div>
+                    <button class="wishlist-btn" data-id="2"
+                        aria-label="Add laptop to wishlist">♡</button>
+                    <p class="product-category">Laptops</p>
+                    <h3>HP Pavilion Laptop</h3>
+                    <p class="rating">★★★★★ <span>(4.6)</span></p>
+                    <p class="price">KSh 75,000</p>
+                    <button class="btn add-to-cart"
+                        data-id="2" data-name="HP Pavilion Laptop"
+                        data-price="75000">Add to Cart</button>
+                </article>
+
+                <article class="product-card" data-name="Wireless Headphones">
+                    <div class="product-image">🎧</div>
+                    <button class="wishlist-btn" data-id="3"
+                        aria-label="Add headphones to wishlist">♡</button>
+                    <p class="product-category">Audio</p>
+                    <h3>Wireless Headphones</h3>
+                    <p class="rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="price">KSh 8,500</p>
+                    <button class="btn add-to-cart"
+                        data-id="3" data-name="Wireless Headphones"
+                        data-price="8500">Add to Cart</button>
+                </article>
+
+                <article class="product-card" data-name="Smartwatch">
+                    <div class="product-image">⌚</div>
+                    <button class="wishlist-btn" data-id="4"
+                        aria-label="Add smartwatch to wishlist">♡</button>
+                    <p class="product-category">Wearables</p>
+                    <h3>Smartwatch</h3>
+                    <p class="rating">★★★★★ <span>(4.5)</span></p>
+                    <p class="price">KSh 6,500</p>
+                    <button class="btn add-to-cart"
+                        data-id="4" data-name="Smartwatch"
+                        data-price="6500">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="deal-banner section" id="deals">
+            <div>
+                <p class="eyebrow">SPECIAL OFFERS</p>
+                <h2>Great Technology.<br>Better Prices.</h2>
+                <p>Find your next favourite device at TechVault.</p>
+                <a href="shop.html" class="btn">Explore Deals →</a>
+            </div>
+            <div class="deal-icon">⚡</div>
+        </section>
+
+        <section class="benefits section">
+            <div class="benefit">
+                <span>🚚</span>
+                <h3>Reliable Delivery</h3>
+                <p>Convenient delivery options for your orders.</p>
+            </div>
+            <div class="benefit">
+                <span>🛡️</span>
+                <h3>Secure Shopping</h3>
+                <p>Your shopping experience matters to us.</p>
+            </div>
+            <div class="benefit">
+                <span>🎧</span>
+                <h3>Customer Support</h3>
+                <p>We're here to help with your questions.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ABOUT US SECTION -->
+<section class="about-section" id="about">
+    <div class="about-content">
+        <p class="section-label">WHO WE ARE</p>
+        <h2>About TechVault</h2>
+        <p>
+            TechVault is your trusted destination for modern technology.
+            We offer quality electronics and accessories designed to make
+            your everyday life easier, smarter, and more connected.
+        </p>
+        <p>
+            From smartphones and laptops to essential tech accessories,
+            our goal is to provide reliable products, convenient shopping,
+            and excellent customer service.
+        </p>
+        <a href="shop.html" class="about-button">Explore Our Products</a>
+    </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section class="contact-section" id="contact">
+    <div class="contact-heading">
+        <p class="section-label">WE'RE HERE TO HELP</p>
+        <h2>Contact Us</h2>
+        <p>Have a question about a product or order? Send us a message.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Our team is ready to help with your shopping enquiries.</p>
+
+            <p><strong>Email:</strong> dollarkheed957@gmail.com</p>
+            <p><strong>Phone:</strong> 0768704133</p>
+            <p><strong>Location:</strong> Kenya</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName"
+                   placeholder="Enter your name" required>
+
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail"
+                   placeholder="Enter your email" required>
+
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" rows="5"
+                      placeholder="How can we help you?" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="contactFeedback" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+    <footer class="footer" id="about">
+        <div>
+            <a href="index.html" class="logo">Tech<span>Vault.</span></a>
+            <p>Your Tech, Our Priority.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+            
+        </div>
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@techvault.example</p>
+            <p>Customer support and order assistance.</p>
+        </div>
+        <p class="copyright">© 2026 TechVault. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

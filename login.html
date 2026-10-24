@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Account | TechVault</title>
+
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+
+<body>
+
+    <div class="announcement">
+        FREE DELIVERY ON ORDERS OVER KSh 5,000
+    </div>
+
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="index.html" class="logo">TechVault<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            </div>
+
+            <div class="header-actions">
+                <a href="login.html" class="active">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="account-page">
+
+        <section class="account-card">
+
+            <div class="account-brand">
+                <div class="account-icon">♙</div>
+                <h1>Welcome to TechVault</h1>
+                <p>Sign in to your account or create a new one.</p>
+            </div>
+
+            <div class="account-tabs">
+                <button type="button" id="loginTab" class="tab-button active">
+                    Sign In
+                </button>
+
+                <button type="button" id="registerTab" class="tab-button">
+                    Create Account
+                </button>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="account-submit">
+                    Sign In
+                </button>
+
+                <p class="form-message" id="loginMessage" aria-live="polite"></p>
+
+            </form>
+
+            <form id="registerForm" hidden>
+
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Create Password</label>
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="At least 6 characters"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="account-submit">
+                    Create Account
+                </button>
+
+                <p class="form-message" id="registerMessage" aria-live="polite"></p>
+
+            </form>
+
+            <p class="account-note">
+                By continuing, you agree to use TechVault responsibly.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechVault. All rights reserved.</p>
+        <p>Your technology. Your lifestyle.</p>
+    </footer>
+
+</body>
+</html>

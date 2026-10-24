@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Wishlist | TechVault</title>
+
+    <link rel="stylesheet" href="wishlist.css">
+    <script src="wishlist.js" defer></script>
+</head>
+<body>
+
+    <div class="announcement">
+        Welcome to TechVault | Your Trusted Electronics Store
+    </div>
+
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="index.html" class="logo">TechVault<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="header-actions">
+                <a href="wishlist.html" class="active">♡ Wishlist</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+                <a href="login.html">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wishlist-page">
+        <div class="wishlist-heading">
+            <p class="eyebrow">YOUR SAVED ITEMS</p>
+            <h1>My Wishlist <span>♡</span></h1>
+            <p>Keep track of the technology you love.</p>
+        </div>
+
+        <div id="wishlistMessage" class="wishlist-message"
+            aria-live="polite"></div>
+
+        <section id="wishlistItems" class="wishlist-grid"></section>
+
+        <div id="emptyWishlist" class="empty-wishlist" hidden>
+            <div class="empty-icon">♡</div>
+            <h2>Your wishlist is empty</h2>
+            <p>Save products you love and find them here later.</p>
+            <a href="shop.html" class="btn btn-primary">Explore Products</a>
+        </div>
+
+        <div class="wishlist-footer">
+            <a href="shop.html" class="continue-shopping">
+                ← Continue Shopping
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechVault. All rights reserved.</p>
+        <p>Your technology. Your lifestyle.</p>
+    </footer>
+
+</body>
+</html>

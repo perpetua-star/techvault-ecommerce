@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmation | TechVault</title>
+
+    <link rel="stylesheet" href="order-confirmation.css">
+    <script src="order-confirmation.js" defer></script>
+</head>
+
+<body>
+
+    <div class="announcement">
+        FREE DELIVERY ON ORDERS OVER KSh 5,000
+    </div>
+
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="index.html" class="logo">TechVault<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="header-actions">
+                <a href="wishlist.html">♡ Wishlist</a>
+                <a href="cart.html">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+                <a href="login.html">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="confirmation-page">
+
+        <section class="confirmation-card">
+
+            <div class="success-icon" aria-hidden="true">✓</div>
+
+            <p class="eyebrow">ORDER RECEIVED</p>
+
+            <h1>Thank You for Your Order!</h1>
+
+            <p class="confirmation-intro">
+                Your order has been recorded successfully.
+                Review your order details below.
+            </p>
+
+            <div id="confirmationMessage" class="confirmation-message"
+                aria-live="polite"></div>
+
+            <div id="orderDetails">
+
+                <div class="order-number-box">
+                    <span>Order Number</span>
+                    <strong id="orderNumber">Loading...</strong>
+                </div>
+
+                <div class="order-information">
+                    <h2>Customer Information</h2>
+
+                    <p><strong>Name:</strong>
+                        <span id="customerName"></span>
+                    </p>
+
+                    <p><strong>Email:</strong>
+                        <span id="customerEmail"></span>
+                    </p>
+
+                    <p><strong>Phone:</strong>
+                        <span id="customerPhone"></span>
+                    </p>
+
+                    <p><strong>Delivery Address:</strong>
+                        <span id="customerAddress"></span>
+                    </p>
+
+                    <p><strong>Payment Method:</strong>
+                        <span id="paymentMethod"></span>
+                    </p>
+
+                    <p><strong>Order Status:</strong>
+                        <span id="orderStatus" class="status-badge">
+                            Pending
+                        </span>
+                    </p>
+                </div>
+
+                <div class="ordered-products">
+                    <h2>Items Ordered</h2>
+                    <div id="confirmedItems"></div>
+                </div>
+
+                <div class="confirmation-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="confirmedSubtotal">KSh 0</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Delivery</span>
+                        <span id="confirmedDelivery">KSh 0</span>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <span>Total Paid / Due</span>
+                        <span id="confirmedTotal">KSh 0</span>
+                    </div>
+
+                    <p class="payment-disclaimer" id="paymentDisclaimer"></p>
+                </div>
+
+            </div>
+
+            <div id="noOrder" hidden>
+                <h2>No recent order found</h2>
+                <p>
+                    Complete checkout first to see your order confirmation.
+                </p>
+            </div>
+
+            <div class="confirmation-actions">
+                <a href="shop.html" class="btn btn-primary">
+                    Continue Shopping
+                </a>
+
+                <button type="button" id="printOrder"
+                    class="btn btn-secondary">
+                    Print Order
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechVault. All rights reserved.</p>
+        <p>Your technology. Your lifestyle.</p>
+    </footer>
+
+</body>
+</html>

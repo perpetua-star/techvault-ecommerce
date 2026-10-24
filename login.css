@@ -1,0 +1,407 @@
+/* ==========================================================
+   TechVault | Account page (login.css)
+   ========================================================== */
+
+:root {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e2e6ef;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --accent: #06b6d4;
+    --dark: #0b1020;
+    --success: #15803d;
+    --danger: #dc2626;
+    --radius: 14px;
+    --shadow: 0 20px 50px rgba(17, 24, 39, 0.1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ---------- Announcement bar ---------- */
+
+.announcement {
+    background: var(--dark);
+    color: #e5e7eb;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 0.55rem 1rem;
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.nav-links a,
+.header-actions a {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover,
+.header-actions a:hover {
+    color: var(--text);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.header-actions a.active {
+    color: #fff;
+    background: var(--primary);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.header-actions a.active:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------- Account page ---------- */
+
+.account-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.25rem;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(79, 70, 229, 0.12), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.12), transparent 40%),
+        var(--bg);
+}
+
+.account-card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 2.25rem 2rem;
+}
+
+/* ---------- Brand block ---------- */
+
+.account-brand {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.account-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+}
+
+.account-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.account-brand p {
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+/* ---------- Tabs ---------- */
+
+.account-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+    padding: 0.3rem;
+    margin-bottom: 1.5rem;
+    background: var(--bg);
+    border-radius: 12px;
+}
+
+.tab-button {
+    border: none;
+    background: transparent;
+    padding: 0.7rem 0.5rem;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--muted);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-button:hover {
+    color: var(--text);
+}
+
+.tab-button.active {
+    background: var(--surface);
+    color: var(--primary);
+    box-shadow: 0 2px 8px rgba(17, 24, 39, 0.1);
+}
+
+/* ---------- Forms ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:hover {
+    border-color: #c9cfdd;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+.form-group input:user-invalid {
+    border-color: var(--danger);
+}
+
+.account-submit {
+    margin-top: 0.4rem;
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.account-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.4);
+    filter: brightness(1.05);
+}
+
+.account-submit:active {
+    transform: translateY(0);
+}
+
+.account-submit:focus-visible,
+.tab-button:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, 0.4);
+    outline-offset: 2px;
+}
+
+/* ---------- Messages (add .success or .error from JS) ---------- */
+
+.form-message {
+    min-height: 1.2rem;
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.form-message.success {
+    color: var(--success);
+}
+
+.form-message.error {
+    color: var(--danger);
+}
+
+.account-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background: var(--dark);
+    color: #9ca3af;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1.75rem 1rem;
+}
+
+.site-footer p + p {
+    margin-top: 0.25rem;
+    color: #6b7280;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.9rem;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-page {
+        padding: 1.5rem 1rem;
+    }
+
+    .account-card {
+        padding: 1.75rem 1.25rem;
+        border-radius: 16px;
+    }
+
+    .announcement {
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
